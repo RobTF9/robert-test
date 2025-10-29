@@ -1,0 +1,99 @@
+{
+  "id": "deBYF9MlTAvmQrpd",
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        -192
+      ],
+      "id": "4860697a-a5d7-43c2-acf9-7c7e7915e2e7",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fb02021c-2382-4b40-be51-f5289f71c076",
+              "leftValue": "asdasd",
+              "rightValue": "asdasdasd",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        320,
+        0
+      ],
+      "id": "b73895fa-bfda-4285-b72f-d459be35c5d8",
+      "name": "If"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        384,
+        -352
+      ],
+      "id": "0cdf4546-08ed-4d76-aeb3-2c2a326e6f73",
+      "name": "No Operation, do nothing"
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "triggerCount": 0,
+  "versionId": "e3f43c7a-b42d-45b6-a406-1c481ee4fb5f",
+  "owner": {
+    "type": "personal",
+    "projectId": "xEt9WPM8c2O9DWos",
+    "projectName": "Dark Mode <test+darkmode@n8n.io>",
+    "personalEmail": "test+darkmode@n8n.io"
+  },
+  "parentFolderId": null,
+  "isArchived": false
+}
